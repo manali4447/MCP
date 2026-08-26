@@ -12,21 +12,29 @@ MCP is a protocol that lets applications expose tools/functions to LLM clients i
 - Python 3.10+
 - [fastmcp](https://pypi.org/project/fastmcp/)
 
-Install it with:
+Set up a virtual environment and install it:
 
 ```bash
-pip install fastmcp
+python3 -m venv venv
+source venv/bin/activate
+pip3 install fastmcp
 ```
 
 ## Running the demo
 
-Run the client, which starts the server as a subprocess and calls its `add` tool:
+With the virtual environment activated, run the client, which starts the server as a subprocess and calls its `add` tool:
 
 ```bash
-python call.py
+python3 call.py
 ```
 
 You should see the result of the tool call printed to the console.
+
+When you're done, deactivate the virtual environment:
+
+```bash
+deactivate
+```
 
 ## How it works
 
